@@ -5,13 +5,13 @@ export class AppRateWeb extends WebPlugin implements AppRatePlugin {
   constructor() {
     super({
       name: 'AppRate',
-      platforms: ['web'],
+      platforms: ['web', 'ios', 'andriod'],
     });
   }
 
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  async rate(): Promise<{ value: string }> {
+    console.log('APP RATE WEB');
+    return {value: 'success'};
   }
 }
 

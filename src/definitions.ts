@@ -5,5 +5,5 @@ declare module '@capacitor/core' {
 }
 
 export interface AppRatePlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+    rate(): Promise<{ value: string }>;
 }

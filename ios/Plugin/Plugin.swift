@@ -1,6 +1,6 @@
 import Foundation
 import Capacitor
-
+import StoreKit
 /**
  * Please read the Capacitor iOS Plugin Development Guide
  * here: https://capacitorjs.com/docs/plugins/ios
@@ -8,10 +8,11 @@ import Capacitor
 @objc(AppRate)
 public class AppRate: CAPPlugin {
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.success([
-            "value": value
+    @objc func rate(_ call: CAPPluginCall) {
+        print("APP RATE iOS")
+        SKStoreReviewController.requestReview()
+        call.resolve([
+            "value": "success"
         ])
     }
 }

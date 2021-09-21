@@ -23,7 +23,7 @@ public class AppRate extends Plugin {
         Task<ReviewInfo> request = manager.requestReviewFlow();
 
 
-/*        request.addOnCompleteListener(task -> {
+        request.addOnCompleteListener(task -> {
 
             if (task.isSuccessful()) {
                 ReviewInfo reviewInfo = task.getResult();
@@ -42,7 +42,7 @@ public class AppRate extends Plugin {
             }
 
         });
-*/
+
 	call.success();
     }
 }

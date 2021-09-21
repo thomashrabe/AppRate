@@ -1,6 +1,6 @@
 {
   "name": "AppRate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Ionic App Rate",
   "main": "dist/plugin.js",
   "module": "dist/esm/index.js",

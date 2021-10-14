@@ -17,7 +17,7 @@ import com.google.android.play.core.tasks.Task;
 public class AppRateClass extends Plugin {
 
     @PluginMethod
-    public void echo(PluginCall call) {
+    public void rate(PluginCall call) {
         Activity activity = this.cordova.getActivity();
         ReviewManager manager = ReviewManagerFactory.create(activity);
         Task<ReviewInfo> request = manager.requestReviewFlow();

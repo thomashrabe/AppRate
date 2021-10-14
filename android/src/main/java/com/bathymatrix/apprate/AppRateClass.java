@@ -14,7 +14,7 @@ import com.google.android.play.core.tasks.Task;
 
 
 @NativePlugin
-public class AppRate extends Plugin {
+public class AppRateClass extends Plugin {
 
     @PluginMethod
     public void echo(PluginCall call) {

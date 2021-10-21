@@ -6,7 +6,9 @@ import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 
-import android.app.Activity;
+// import android.app.Activity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.play.core.review.ReviewInfo;
 import com.google.android.play.core.review.ReviewManager;
@@ -20,7 +22,7 @@ public class AppRateClass extends Plugin {
 
     @PluginMethod
     public void rate(PluginCall call) {
-        Activity activity = this.getActivity();
+        AppCompatActivity activity = this.getActivity();
         ReviewManager manager = ReviewManagerFactory.create(this);
         Task<ReviewInfo> request = manager.requestReviewFlow();
 

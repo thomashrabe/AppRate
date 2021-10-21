@@ -40,8 +40,8 @@ public class AppRateClass extends AppCompatActivity {
                     // }
                 });
             } else {
-                Exception error = task.getException();
-                callbackContext.error("Failed to launch review flow - " + error.getMessage());
+                // Exception error = task.getException();
+                // callbackContext.error("Failed to launch review flow - " + error.getMessage());
             }
 
         });

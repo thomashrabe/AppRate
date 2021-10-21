@@ -18,11 +18,11 @@ import com.google.android.play.core.tasks.Task;
 
 
 @NativePlugin
-public class AppRateClass extends Plugin {
+public class AppRateClass extends AppCompatActivity {
 
     @PluginMethod
     public void rate(PluginCall call) {
-        AppCompatActivity activity = this.getActivity();
+        // AppCompatActivity activity = this.getActivity();
         ReviewManager manager = ReviewManagerFactory.create(this);
         Task<ReviewInfo> request = manager.requestReviewFlow();
 
@@ -30,7 +30,7 @@ public class AppRateClass extends Plugin {
 
             if (task.isSuccessful()) {
                 ReviewInfo reviewInfo = task.getResult();
-                Task<Void> flow = manager.launchReviewFlow(activity, reviewInfo);
+                Task<Void> flow = manager.launchReviewFlow(this, reviewInfo);
                 flow.addOnCompleteListener(launchTask -> {
                     // if (task.isSuccessful()) {
                     //     callbackContext.success();
